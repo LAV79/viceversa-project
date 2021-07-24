@@ -4,4 +4,6 @@ def home(rq):
 	return render(rq,'home.html')
 
 def reverse(rq):
-	return render(rq,'reverse.html')
+	txt=rq.GET['message']
+	# print(txt)
+	return render(rq,'reverse.html',{'txt':txt[::-1]})
